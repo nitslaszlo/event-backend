@@ -11,14 +11,14 @@ import authMiddleware from "../middleware/auth.middleware";
 import roleCheckMiddleware from "../middleware/roleCheckMiddleware";
 import validationMiddleware from "../middleware/validation.middleware";
 // import postModel from "../post/post.model";
-import CreateUserDto from "./user.dto";
-import IUser from "./user.interface";
-import userModel from "./user.model";
+import CreateLocationDto from "./location.dto";
+import ILocation from "./location.interface";
+import locationModel from "./location.model";
 
-export default class UserController implements IController {
-    public path = "/users";
+export default class LocationController implements IController {
+    public path = "/locations";
     public router = Router();
-    private user = userModel;
+    private location = locationModel;
     // private post = postModel;
 
     constructor() {
@@ -29,7 +29,7 @@ export default class UserController implements IController {
         // this.router.get(`${this.path}/posts/:id`, authMiddleware, this.getAllPostsOfUserByID);
         // this.router.get(`${this.path}/posts/`, authMiddleware, this.getAllPostsOfLoggedUser);
         this.router.get(`${this.path}/:id`, authMiddleware, this.getUserById);
-        this.router.get(this.path, authMiddleware, this.getAllUsers);
+        this.router.get(this.path, authMiddleware, this.getAllLocations);
 
         this.router.patch(`${this.path}/:id`, [authMiddleware, validationMiddleware(CreateUserDto, true), roleCheckMiddleware(["admin"])], this.modifyUser);
 

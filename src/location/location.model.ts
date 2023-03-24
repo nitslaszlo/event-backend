@@ -1,44 +1,28 @@
 import { model, Schema } from "mongoose";
 
-import IUser from "./user.interface";
+import ILocation from "./location.interface";
 
-const userSchema = new Schema<IUser>(
+const locationSchema = new Schema<ILocation>(
     {
         _id: Schema.Types.ObjectId,
-        email: {
+        city: {
             type: String,
             required: true,
         },
-        email_verified: {
-            type: Boolean,
-            required: true,
-        },
-        auto_login: {
-            type: Boolean,
-            required: true,
-        },
-        name: {
+        street: {
             type: String,
             required: true,
         },
-        sex: {
+        house_number: {
             type: String,
             required: true,
         },
-        birthdate: {
-            type: String,
+        capacity: {
+            type: Number,
             required: true,
         },
-        picture: {
-            type: String,
-            required: true,
-        },
-        password: {
-            type: String,
-            required: true,
-        },
-        roles: {
-            type: [String], // Array of string
+        applied: {
+            type: Number,
             required: true,
         },
     },
@@ -59,6 +43,6 @@ const userSchema = new Schema<IUser>(
 //     justOne: false,
 // });
 
-const userModel = model<IUser>("Users", userSchema, "users");
+const locationModel = model<ILocation>("Locations", locationSchema, "locations");
 
-export default userModel;
+export default locationModel;

@@ -1,0 +1,92 @@
+[
+    {
+        "_id": {
+            "$oid": "a00000000000000000000001"
+        },
+        "city": "Győr",
+        "street": "Egyetem tér",
+        "house_number": "1",
+        "capacity": 2500,
+        "applied": 0
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000002"
+        },
+        "city": "Szombathely",
+        "street": "Haladás sportkomplexum",
+        "house_number": "",
+        "capacity": 9000,
+        "applied": 0
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000003"
+        },
+        "city": "Brennbergbánya",
+        "street": "Rákóczi út ",
+        "house_number": "30",
+        "capacity": 10000,
+        "applied": 0
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000004"
+        },
+        "city": "Fertőszéplak",
+        "street": "Petőfi Sándor utca",
+        "house_number": "1/A",
+        "capacity": 10,
+        "applied": 0
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000005"
+        },
+        "city": "Sopronkövesd",
+        "street": "Kossuth Lajos utca",
+        "house_number": "77",
+        "capacity": 1000,
+        "applied": 0
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000006"
+        },
+        "city": "Sopron",
+        "street": "Luther Márton tér",
+        "house_number": "1",
+        "capacity": 70,
+        "applied": 0
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000007"
+        },
+        "city": "Szombathely",
+        "street": "Március 15. tér",
+        "house_number": "5",
+        "capacity": 1000,
+        "applied": 0
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000008"
+        },
+        "city": "Szombathely",
+        "street": "Ady tér",
+        "house_number": "3",
+        "capacity": 200,
+        "applied": 0
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000009"
+        },
+        "city": "Mosonmagyaróvár",
+        "street": "Erkel Ferenc utca",
+        "house_number": "14",
+        "capacity": 450,
+        "applied": 0
+    }
+]
