@@ -7,10 +7,10 @@
     },
     "servers": [
         {
-            "url": "https://jedliksession.cyclic.app"
+            "url": "http://localhost:5000"
         },
         {
-            "url": "http://localhost:5000"
+            "url": "https://jedliksession.cyclic.app"
         }
     ],
     "paths": {
@@ -34,8 +34,8 @@
                                 }
                             },
                             "example": {
-                                "email": "student005@jedlik.eu",
-                                "password": "student005"
+                                "email": "student001@jedlik.eu",
+                                "password": "student001"
                             }
                         }
                     }
@@ -128,11 +128,11 @@
             }
         },
         
-        "/posts": {
+        "/locations": {
             "get": {
-                "tags": ["posts"],
-                "summary": "Összes post lekérdezése.",
-                "description": "Az összes post adatát tudjuk lekérdezni.",
+                "tags": ["locations"],
+                "summary": "Összes helyszin lekérdezése.",
+                "description": "Az összes helyszin adatát tudjuk lekérdezni.",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -141,7 +141,7 @@
                                 "schema": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/components/schemas/post"
+                                        "$ref": "#/components/schemas/location"
                                     }
                                 }
                             }
@@ -160,15 +160,15 @@
                 }
             },
             "post": {
-                "tags": ["posts"],
-                "summary": "Új post mentése.",
-                "description": "Új post mentése a 'post' táblában",
+                "tags": ["locations"],
+                "summary": "Új helyszin mentése.",
+                "description": "Új helyszin mentése a 'post' táblában",
                 "requestBody": {
                     "content": {
                         "application/json": {
                             "schema": {
                                 "type": "object",
-                                "$ref": "#/components/schemas/post"
+                                "$ref": "#/components/schemas/location"
                             }
                         }
                     }
@@ -180,7 +180,7 @@
                             "application/json": {
                                 "schema": {
                                     "type": "object",
-                                    "$ref": "#/components/schemas/post"
+                                    "$ref": "#/components/schemas/location"
                                 }
                             }
                         }
@@ -198,9 +198,9 @@
                 }
             }
         },
-        "/posts/{id}": {
+        "/locations/{id}": {
             "get": {
-                "tags": ["posts"],
+                "tags": ["locations"],
                 "summary": "Egy post lekérdezése.",
                 "description": "Az id paraméterben megadott post adatait kérdezhetjük le.",
                 "parameters": [
@@ -222,7 +222,7 @@
                             "application/json": {
                                 "schema": {
                                     "type": "object",
-                                    "$ref": "#/components/schemas/post"
+                                    "$ref": "#/components/schemas/location"
                                 }
                             }
                         }
@@ -256,8 +256,8 @@
                 }
             },
             "patch": {
-                "tags": ["posts"],
-                "summary": "post módosítása (PATCH).",
+                "tags": ["locations"],
+                "summary": "helyszin módosítása (PATCH).",
                 "description": "A paraméterben megadott post adatait módosítja a végpont.",
                 "parameters": [
                     {
@@ -276,7 +276,7 @@
                         "application/json": {
                             "schema": {
                                 "type": "object",
-                                "$ref": "#/components/schemas/post"
+                                "$ref": "#/components/schemas/location"
                             }
                         }
                     }
@@ -288,7 +288,7 @@
                             "application/json": {
                                 "schema": {
                                     "type": "object",
-                                    "$ref": "#/components/schemas/post"
+                                    "$ref": "#/components/schemas/location"
                                 }
                             }
                         }
@@ -312,7 +312,7 @@
                 }
             },
             "put": {
-                "tags": ["posts"],
+                "tags": ["locations"],
                 "summary": "post módosítása (PUT).",
                 "description": "A paraméterben megadott post adatait módosítja a végpont PUT metódussal.",
                 "parameters": [
@@ -332,7 +332,7 @@
                         "application/json": {
                             "schema": {
                                 "type": "object",
-                                "$ref": "#/components/schemas/post"
+                                "$ref": "#/components/schemas/location"
                             }
                         }
                     }
@@ -344,7 +344,7 @@
                             "application/json": {
                                 "schema": {
                                     "type": "object",
-                                    "$ref": "#/components/schemas/post"
+                                    "$ref": "#/components/schemas/location"
                                 }
                             }
                         }
@@ -368,7 +368,7 @@
                 }
             },
             "delete": {
-                "tags": ["posts"],
+                "tags": ["locations"],
                 "summary": "post törlése.",
                 "description": "A paraméterben megadott postot törli a végpont.",
                 "parameters": [
@@ -960,7 +960,7 @@
     ],
     "components": {
         "schemas": {
-            "post": {
+            "location": {
                 "type": "object",
                 "required": ["title"],
                 "properties": {
@@ -1059,12 +1059,12 @@
                     "name": {
                         "type": "string",
                         "description": "A felhasználó neve",
-                        "example": "student005"
+                        "example": "student001"
                     },
                     "email": {
                         "type": "string",
                         "description": "A felhasználó által használt e-mail cím a regisztráció során",
-                        "example": "student005@jedlik.eu"
+                        "example": "student001@jedlik.eu"
                     },
                     "email_verified": {
                         "type": "boolean",
